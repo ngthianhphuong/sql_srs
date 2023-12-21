@@ -12,7 +12,6 @@ orange juice, 2.5
 expresso, 2 
 tea, 3
 """
-
 beverages = pd.read_csv(io.StringIO(csv))
 
 csv2 = """
@@ -21,8 +20,17 @@ cookie juice, 2.5
 chocolatine, 2
 muffin, 3
 """
-
 food_items = pd.read_csv(io.StringIO(csv2))
+
+with st.sidebar:
+    option = st.selectbox(
+        'What would you like to review?',
+        ['Join', 'GroupBy', 'Windows Functions'],
+        index=None,
+        placeholder="Select a theme...",
+    )
+
+    st.write("You've selected: ", option)
 
 # la réponse que l'utilisateur doit donner
 answer = """
@@ -52,6 +60,3 @@ with tab1:
 
 with tab2:
     st.write(answer)
-
-
-
