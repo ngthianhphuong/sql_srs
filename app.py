@@ -58,5 +58,4 @@ with tab1:
     st.write("Expected output:")
     st.dataframe(solution)
 
-with tab2:
-    st.write(answer)
+
